@@ -1,0 +1,20 @@
+{% extends "admin/base.html" %}
+
+{% block content %}
+<div class="stats" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+    <div class="card" style="text-align: center;">
+        <h3>تعداد محصولات</h3>
+        <p style="font-size: 24px; color: #3b82f6;">{{ total_products }}</p>
+    </div>
+    <div class="card" style="text-align: center;">
+        <h3>تعداد دسته‌بندی‌ها</h3>
+        <p style="font-size: 24px; color: #10b981;">{{ total_categories }}</p>
+    </div>
+</div>
+
+<div class="card">
+    <h2>عملیات سریع</h2>
+    <a href="/admin/upload" class="btn">آپلود فایل اکسل</a>
+    <a href="/admin/products" class="btn">مدیریت محصولات</a>
+</div>
+{% endblock %}

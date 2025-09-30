@@ -1,10 +1,23 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import { createRoot } from 'react-dom/client'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Product from './pages/Product'
+import Cart from './pages/Cart'
+import Category from './pages/Category'
+import './styles.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+function App(){
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/category/:cat' element={<Category/>} />
+        <Route path='/product/:serial' element={<Product/>} />
+        <Route path='/cart' element={<Cart/>} />
+      </Routes>
+    </BrowserRouter>
+  )
+}
+
+createRoot(document.getElementById('root')).render(<App/>)

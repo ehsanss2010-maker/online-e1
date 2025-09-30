@@ -1,0 +1,1 @@
+Complete scaffold for online-e (backend + frontend + admin + mobile-app)\nSee backend/README.md for backend instructions.
